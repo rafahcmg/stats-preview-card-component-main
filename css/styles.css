@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Lexend Deca', sans-serif;
+    box-sizing: border-box;
+    font-size: 0.94rem;
+}
+
+html {
+    background-color: hsl(233, 47%, 7%);
+}
+
+body {
+    width: 100%;
+    font-size: 0.94rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    margin: 2rem    ;
+}
+
+.img {
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(277, 64%, 61%, 0.55);
+}
+
+.text-area {
+    width: 100%;
+    padding: 4rem;
+}
+
+.text-area h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.text-area h1 > span {
+    font-size: 2rem;
+    color: hsl(277, 64%, 61%);
+}
+
+.text-area p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.stats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+    text-transform: uppercase;
+}
+
+.stats h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+}
+
+.stats span {
+    font-family: 'Lexend Deca';
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media only screen and (max-width: 900px) {
+    .text-area {
+        padding: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        text-align: center;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .img {
+        order: -1;
+    }
+
+    .text-area {
+        padding: 1.5rem 2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding-top: 1.5rem;
+    }
+
+    .stats div {
+        margin-top: 1.2rem;
+    }
+
+    .stats div:last-child {
+        margin-bottom: 2rem;
+    }
+}
